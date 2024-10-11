@@ -1,0 +1,206 @@
+/* General Container Styles */
+.container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f4f7f6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(145deg, #28a745, #218838);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.header:hover {
+  transform: scale(1.02);
+}
+
+.header select {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header select:hover {
+  background-color: #f2f2f2;
+}
+
+/* Transactions Table Styles */
+.transactions-table input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 300px;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.transactions-table table:hover {
+  transform: scale(1.01);
+}
+
+.transactions-table th, .transactions-table td {
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: left;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.transactions-table th {
+  background-color: #28a745;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactions-table td:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.transactions-table button {
+  padding: 12px 25px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.transactions-table button:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px);
+}
+
+.transactions-table button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Statistics Section */
+.statistics {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.statistics:hover {
+  transform: translateY(-5px);
+}
+
+/* Charts Section */
+.charts {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.bar-chart, .pie-chart {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bar-chart:hover, .pie-chart:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar-chart, .pie-chart {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Button Hover Animation */
+.transactions-table button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+.transactions-table button:hover::before {
+  width: 100%;
+}
+
+/* Additional Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container, .statistics, .charts {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Smooth Scroll for entire page */
+html {
+  scroll-behavior: smooth;
+}
